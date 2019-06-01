@@ -1,0 +1,8 @@
+Flask
+gunicorn
+Jinja2
+pandas
+numpy
+bokeh==1.0.2
+quandl
+
