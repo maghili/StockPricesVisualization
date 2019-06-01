@@ -1,0 +1,54 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="utf-8" http-equiv="encoding"/>
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" type="text/css" />
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+    {{ script | safe }}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Stock Ticker application to display closing price of a user-defined stock over a user-defined date range."/>
+	<title> Stock Prices </title>
+</head>
+<body>
+	<h2> To find about latest stock prices please enter the stock name </h2>
+	<form method="POST">
+		<p>Stock Name: <input type="text", name="Stock Name", placeholder="GOOG"><br></p><!-- </form></bodybr>
+	<form method="POST"> -->
+		<table>
+			<tr>
+				<td><input type="checkbox" name="Values" value="close"> Closing Price</td>
+				<td><input type="checkbox" name="Values" value="adj_close"> Adjusted Closing Price<br></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="Values" value="open"> Openning Price</td>
+				<td><input type="checkbox" name="Values" value="adj_open"> Adjusted Openning Price<br></td>
+			<tr>
+				<td><input type="checkbox" name="Values" value="high"> High</td>
+				<td><input type="checkbox" name="Values" value="adj_high"> Adjusted High<br></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="Values", value="low"> Low </td>
+				<td><input type="checkbox" name="Values" value="adj_low"> Adjusted Low<br></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="Values", value="volume"> Volume </td>
+				<td><input type="checkbox" name="Values" value="adj_volume"> Adjusted Volume<br></td>
+			</tr>
+		</table><br>
+<!-- 	</form><br>
+	<form method="POST"> -->
+		Start Date: <input type="text", name="Start Date", placeholder="yyyy-mm-dd">
+		Final Date: <input type="text", name="End Date", placeholder="yyyy-mm-dd"><br>
+	<br>
+	<input type="submit" value="submit">
+	</form>
+	<div class='page'>
+      {{ div | safe }}
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
